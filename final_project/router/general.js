@@ -79,6 +79,8 @@ public_users.get('/title/:title',function (req, res) {
   }
 });
 
+
+
 //  Get book review
 public_users.get('/review/:isbn',function (req, res) {
   //Write your code here
@@ -96,3 +98,47 @@ public_users.get('/review/:isbn',function (req, res) {
 });
 
 module.exports.general = public_users;
+
+/*
+
+async function getAllBooks() {
+    try {
+      const response = await axios.get('http://localhost:5000/');
+      console.log("All Books:\n", response.data);
+    } catch (error) {
+      console.error("Error fetching all books:", error.message);
+    }
+  }
+getAllBooks();
+
+async function getBookByISBN(isbn) {
+    try {
+      const response = await axios.get(`http://localhost:5000/isbn/${isbn}`);
+      console.log(`Book with ISBN ${isbn}:\n`, response.data);
+    } catch (error) {
+      console.error(`Error fetching book by ISBN ${isbn}:`, error.message);
+    }
+  }
+getBookByISBN();
+
+async function getBooksByAuthor(author) {
+    try {
+      const response = await axios.get(`http://localhost:5000/author/${encodeURIComponent(author)}`);
+      console.log(`Books by ${author}:\n`, response.data);
+    } catch (error) {
+      console.error(`Error fetching books by author ${author}:`, error.message);
+    }
+  }
+getBooksByAuthor();
+
+async function getBooksByTitle(title) {
+    try {
+      const response = await axios.get(`http://localhost:5000/title/${encodeURIComponent(title)}`);
+      console.log(`Books with title "${title}":\n`, response.data);
+    } catch (error) {
+      console.error(`Error fetching books by title "${title}":`, error.message);
+    }
+  }
+getBooksByTitle();
+
+*/
